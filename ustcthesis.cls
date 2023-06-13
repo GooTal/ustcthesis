@@ -1821,6 +1821,7 @@
       \providecommand\lishu{\sffamily}
     \fi
   \fi
+  \newcommand\ustc@professional@type@name{专业类别}
   \newcommand\ustc@speciality@name{专业领域}
 \fi
 
@@ -1877,7 +1878,7 @@
         \ifx\ustc@professional@type\@empty
           \null
         \else
-          \lishu （\ustc@professional@type ）%
+          % \lishu （\ustc@professional@type ）%
         \fi
         \par
       \endgroup
@@ -1897,6 +1898,7 @@
     {\fontsize{16bp}{31bp}\selectfont
       \begin{tabular}{@{}l@{\hspace{\ccwd}}l@{}}%
         \textsf{作者姓名：} & \ustc@author \\
+        \textsf{\ustc@professional@type@name} & \ustc@professional@type \\
         \textsf{\ustc@speciality@name：} & \ustc@speciality \\
         \ifx\ustc@advisor\@empty
           \textsf{导师姓名：} & \ustc@supervisor@names \\
@@ -1930,7 +1932,7 @@
         \ifx\ustc@professional@type@en\@empty
           \null
         \else
-          (\ustc@professional@type@en)
+          % (\ustc@professional@type@en)
         \fi
         \par
       \endgroup
